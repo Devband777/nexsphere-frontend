@@ -1,0 +1,105 @@
+.header {
+  .modal_view {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    .icon_group {
+      justify-content: flex-start;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .logo {
+      justify-content: center;
+      margin-left: 100px;
+      width: 48px;
+      height: 48px;
+    }
+    .detail_group {
+      justify-content: flex-end;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.03em;
+      color: white;
+      .left {
+        margin-right: 29px;
+      }
+    }
+    .linear_menu {
+      display: none;
+    }
+  }
+  .modal_hide {
+    width: 100%;
+    height: 184px;
+    background: linear-gradient(120deg, rgba(44, 167, 29, 0.4), black);
+    backdrop-filter: blur(47.5px);
+    margin: -30px 0% 0 -6%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    .modal_view {
+      display: flex;
+      .logo {
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+      }
+    }
+    .modal_hide {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 451px) {
+  .header {
+    .modal_hide {
+      padding: 29px 16px 40px 23px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      .linear_menu {
+        display: flex;
+        justify-content: space-between;
+        .logo {
+          float: left;
+          width: 28px;
+          height: 28px;
+        }
+        img {
+          width: 28px;
+          height: 28px;
+        }
+      }
+      .detailgroup {
+        margin-top: 44px;
+      }
+      .icongroup {
+        margin-top: 30px;
+      }
+    }
+    .modal_view {
+      .logo {
+        justify-content: flex-start;
+        width: 28px;
+        height: 28px;
+        margin-left: 0;
+      }
+      .icon_group,
+      .detail_group {
+        display: none;
+      }
+      .linear_menu {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

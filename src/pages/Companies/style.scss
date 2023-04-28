@@ -1,0 +1,71 @@
+.companies {
+  flex: 1;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0 100px 0;
+  .companies_heading {
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: #d4d4e2;
+    margin-bottom: 8px;
+  }
+  .content {
+    display: flex;
+    padding: 27px 20px 0px 14px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-direction: column;
+    .background {
+      display: flex;
+    }
+    .firstLevel {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .secondLevel {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .thirdLevel {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}
+@media screen and (max-width: 1264px) {
+  .companies {
+    &_heading {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    .content {
+      .background {
+        display: none;
+      }
+      .firstLevel {
+        margin: 0;
+        align-items: center;
+        flex-direction: column;
+      }
+      .secondLevel {
+        margin: 0;
+        align-items: center;
+        flex-direction: column;
+      }
+      .thirdLevel {
+        margin: 0;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  font-style: normal;
+  margin: 50px 0 100px 0;
+  .welcome_message {
+    width: 50%;
+    justify-content: flex-start;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    .welcome_heading {
+      text-align: left;
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 38px;
+      color: #d2d2d2;
+    }
+    .welcome_body {
+      font-family: "Lexend";
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: justify;
+      color: #9d9dad;
+      margin-top: 10px;
+    }
+  }
+  .ourcompanies {
+    width: 44%;
+    height: 590px;
+    text-align: left;
+    justify-content: flex-start;
+    .company_heading {
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 38px;
+      color: #d2d2d2;
+      margin-bottom: 10px;
+    }
+  }
+  .maskgroup {
+    width: 449px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .home {
+    flex-direction: column;
+    margin: 49px 0;
+    .welcome_message {
+      width: 100%;
+      .welcome_heading {
+        font-size: 18px;
+        line-height: 21px;
+      }
+      .welcome_body {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+    .ourcompanies {
+      width: 100%;
+      padding: 40px 0;
+      .company_heading {
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .home {
+    flex-direction: column;
+    .welcome_message {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .home {
+    .ourcompanies {
+      height: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .home {
+    .ourcompanies {
+      height: 300px;
+    }
+  }
+}

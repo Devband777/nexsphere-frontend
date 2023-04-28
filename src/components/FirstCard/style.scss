@@ -1,0 +1,323 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  transition: all 1s;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 0;
+
+  &:before {
+    background: linear-gradient(130deg, #25a3fb, rgba(0, 0, 0, 0), #2ca71d);
+    border-width: 3px;
+    padding: 1px;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .filter1 {
+    position: absolute;
+    background: #25a3fb;
+    opacity: 0.7;
+    filter: blur(75px);
+  }
+  .filter2 {
+    position: absolute;
+    background: #2ca71d;
+    opacity: 0.7;
+    filter: blur(75px);
+  }
+  &-header {
+    display: flex;
+    justify-content: flex-end;
+    .status_label {
+      align-items: center;
+      box-sizing: border-box;
+      width: auto;
+      text-align: center;
+      p {
+        font-family: "Lexend";
+        font-style: normal;
+        font-weight: 500;
+        text-align: justify;
+        letter-spacing: 0.15em;
+        color: #e5e5e5;
+        ul {
+          li::before {
+            color: #e5e5e5;
+          }
+        }
+      }
+    }
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .order2.card {
+    cursor: pointer;
+    width: 328px;
+    height: 185.5px;
+    border-radius: 15px;
+    padding: 8px 15px;
+    &:before {
+      border-radius: 15px;
+    }
+    .filter1 {
+      left: -7px;
+      top: -4px;
+      height: 92.4px;
+      width: 92.4px;
+    }
+    .filter2 {
+      right: -10.7px;
+      bottom: -4.6px;
+      height: 101.6px;
+      width: 101.6px;
+    }
+    .card-header {
+      .status_label {
+        padding: 2px 7.7px;
+        border-radius: 11px;
+        p {
+          font-size: 8px;
+          line-height: 14px;
+        }
+      }
+    }
+    .card-body {
+      gap: 8.5px;
+      margin-top: 14%;
+      .company_logo {
+        img {
+          width: 200px;
+          height: 35px;
+        }
+      }
+      .flag_group {
+        img {
+          width: 14px;
+          height: 14px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  .order3.card {
+    width: 258px;
+    height: 141px;
+    border-radius: 12px;
+    margin-top: 205px;
+    padding: 4.6px 9.5px;
+    &:before {
+      border-radius: 12px;
+    }
+    .filter1 {
+      left: -4px;
+      top: -2.5px;
+      height: 57px;
+      width: 57px;
+    }
+    .filter2 {
+      right: -6.65px;
+      bottom: -2.85px;
+      height: 62px;
+      width: 62px;
+    }
+    .card-header {
+      .status_label {
+        padding: 1px 6.5px;
+        border-radius: 15px;
+        p {
+          font-size: 6px;
+          line-height: 10px;
+        }
+      }
+    }
+    .card-body {
+      margin-top: 15%;
+      gap: 5.85px;
+      .company_logo {
+        img {
+          width: 134px;
+          height: 25px;
+        }
+      }
+      .flag_group {
+        img {
+          width: 8px;
+          height: 8px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .order4.card {
+    width: 202px;
+    height: 114px;
+    border-radius: 10px;
+    margin-top: 365px;
+    padding: 4.6px 9.5px;
+    &:before {
+      border-radius: 10px;
+    }
+    .filter1 {
+      left: -4px;
+      top: -2.5px;
+      height: 57px;
+      width: 57px;
+    }
+    .filter2 {
+      right: -6.65px;
+      bottom: -2.85px;
+      height: 62px;
+      width: 62px;
+    }
+    .card-header {
+      .status_label {
+        padding: 1px 6.5px;
+        border-radius: 15px;
+        p {
+          font-size: 5px;
+          line-height: 8px;
+        }
+      }
+    }
+    .card-body {
+      margin-top: 15%;
+      gap: 5.85px;
+      .company_logo {
+        img {
+          width: 123px;
+          height: 21px;
+        }
+      }
+      .flag_group {
+        img {
+          width: 8px;
+          height: 8px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .order2.card {
+    opacity: 0;
+    margin-top: -200px;
+    width: 100px;
+  }
+  .order3.card {
+    width: 258px;
+    height: 141px;
+    margin-top: 0px;
+    border-radius: 12px;
+    padding: 4.6px 9.5px;
+    &:before {
+      border-radius: 12px;
+    }
+    .filter1 {
+      left: -4px;
+      top: -2.5px;
+      height: 57px;
+      width: 57px;
+    }
+    .filter2 {
+      right: -6.65px;
+      bottom: -2.85px;
+      height: 62px;
+      width: 62px;
+    }
+    .card-header {
+      .status_label {
+        padding: 1px 6.5px;
+        border-radius: 15px;
+        p {
+          font-size: 6px;
+          line-height: 10px;
+        }
+      }
+    }
+    .card-body {
+      margin-top: 15%;
+      gap: 5.85px;
+      .company_logo {
+        img {
+          width: 134px;
+          height: 25px;
+        }
+      }
+      .flag_group {
+        img {
+          width: 8px;
+          height: 8px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .order4.card {
+    width: 202px;
+    height: 114px;
+    border-radius: 10px;
+    margin-top: 165px;
+    padding: 4.6px 9.5px;
+    &:before {
+      border-radius: 10px;
+    }
+    .filter1 {
+      left: -4px;
+      top: -2.5px;
+      height: 57px;
+      width: 57px;
+    }
+    .filter2 {
+      right: -6.65px;
+      bottom: -2.85px;
+      height: 62px;
+      width: 62px;
+    }
+    .card-header {
+      .status_label {
+        padding: 1px 6.5px;
+        border-radius: 15px;
+        p {
+          font-size: 5px;
+          line-height: 8px;
+        }
+      }
+    }
+    .card-body {
+      margin-top: 15%;
+      gap: 5.85px;
+      .company_logo {
+        img {
+          width: 123px;
+          height: 21px;
+        }
+      }
+      .flag_group {
+        img {
+          width: 8px;
+          height: 8px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

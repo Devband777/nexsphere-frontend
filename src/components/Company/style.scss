@@ -1,0 +1,207 @@
+.company {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 368px;
+  height: 210px;
+  margin-bottom: 39px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(23.5px);
+  z-index: 0;
+  transition: height 0.3s ease-in-out;
+  cursor: pointer;
+  &:before {
+    background: linear-gradient(130deg, #25a3fb, rgba(0, 0, 0, 0), #2ca71d);
+    border-radius: 20px;
+    border-width: 3px;
+    height: 99%;
+    padding: 1px;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+  .filter1 {
+    position: absolute;
+    left: -7px;
+    top: -4px;
+    height: 103px;
+    width: 103px;
+    background: #25a3fb;
+    opacity: 0.7;
+    filter: blur(75px);
+  }
+  .filter2 {
+    position: absolute;
+    right: -12px;
+    bottom: -5px;
+    height: 114px;
+    width: 114px;
+    background: #2ca71d;
+    opacity: 0.7;
+    filter: blur(75px);
+  }
+  .modal_hide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+    &-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .category_label {
+        display: flex;
+        flex-direction: row;
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+        p {
+          margin-top: 3px;
+          font-family: "Lexend";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18px;
+          text-align: justify;
+          color: #25a3fb;
+        }
+      }
+      .status_label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 4px 10.23px;
+        width: auto;
+        height: 22px;
+        border-radius: 11px;
+        text-align: center;
+        p {
+          font-family: "Lexend";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 14px;
+          text-align: justify;
+          letter-spacing: 0.15em;
+          color: #e5e5e5;
+          ul {
+            li::before {
+              color: #e5e5e5;
+            }
+          }
+        }
+      }
+    }
+    .flag_group {
+      margin-top: 50px;
+      img {
+        width: 15px;
+        height: 15px;
+        margin-right: 9px;
+      }
+    }
+    .company-footer {
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  .company_logo {
+    position: absolute;
+    top: 30%;
+    left: 18%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 225px;
+    height: 38px;
+    margin-bottom: 10px;
+  }
+  .modal_show {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    &_body {
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 23px;
+      text-align: justify;
+      letter-spacing: 0.03em;
+      color: #a1a1ab;
+    }
+    &_bottom {
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      color: #2ca71d;
+    }
+  }
+}
+.company.hidden {
+  height: 245px;
+  transition: height 0.3s ease-out;
+}
+.modal_show.hidden {
+  opacity: 1;
+  transition: opacity 0.5s, top 0.5s;
+  top: 13%;
+}
+
+.modal_show {
+  opacity: 0;
+  transition: opacity 0.5s, top 0.5s;
+  top: 200px;
+}
+.modal_hide.hidden {
+  transition: opacity 0.5s, top 0.5s;
+  opacity: 0;
+  top: -200px;
+}
+.modal_hide {
+  transition: opacity 0.5s, top 0.5s;
+  opacity: 1;
+  top: 0px;
+}
+.company_logo.hidden {
+  transition: top 0.5s;
+  top: 5%;
+}
+.company_logo {
+  transition: top 0.5s;
+  top: 30%;
+}

@@ -1,0 +1,56 @@
+.floatingLabelInput {
+  position: relative;
+  margin-bottom: 20px;
+  input {
+    width: 100%;
+    padding-top: 16px;
+    border: none;
+    border-bottom: 1px solid #205f18;
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    background-color: transparent;
+    color: aliceblue;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #d4d4e2;
+    transition: top 0.2s, font-size 0.2s;
+
+    img {
+      width: 14px;
+      margin-right: 5px;
+    }
+  }
+
+  &.has-value label,
+  input:focus + label {
+    top: 0px;
+    font-size: 12px;
+    img {
+      width: 12px;
+      margin-right: 5px;
+    }
+  }
+
+  input:focus {
+    outline: none;
+    background: transparent;
+  }
+}

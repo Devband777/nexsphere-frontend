@@ -1,0 +1,49 @@
+.termandconditions {
+  font-style: normal;
+  margin: 50px 0 100px 0;
+  .term_heading {
+    text-align: left;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: #d2d2d2;
+  }
+  .term_body {
+    font-family: "Lexend";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: justify;
+    color: #9d9dad;
+    margin-top: 10px;
+  }
+  .term_subtitle {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: justify;
+    color: #d4d4e2;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .termandconditions {
+    margin: 49px 0;
+    .term_heading {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    .term_body {
+      font-size: 14px;
+      line-height: 26px;
+    }
+    .term_subtitle {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
